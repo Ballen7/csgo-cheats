@@ -3,8 +3,8 @@
 
 #pragma comment(lib, "Setupapi.lib")
 
-#include <Windows.h>
-#include <SetupAPI.h>
+#include <windows.h>
+#include <setupapi.h>
 #include <devguid.h>
 
 #include <string>

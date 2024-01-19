@@ -1,7 +1,7 @@
 #ifndef PC_ARRAYS_ARRAYS_H_
 #define PC_ARRAYS_ARRAYS_H_
 
-#include <Windows.h>
+#include <windows.h>
 
 #include <string>
 #include <unordered_map>

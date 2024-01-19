@@ -1,8 +1,8 @@
 #ifndef PC_MEMORY_MEMORY_H_
 #define PC_MEMORY_MEMORY_H_
 
-#include <Windows.h>
-#include <TlHelp32.h>
+#include <windows.h>
+#include <tlhelp32.h>
 
 struct Module {
   DWORD base;

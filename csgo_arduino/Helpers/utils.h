@@ -6,10 +6,10 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
-#include "Helpers/arrays.h"
-#include "Helpers/bytes.h"
-#include "Helpers/definitions.h"
-#include "Helpers/global.h"
+#include "arrays.h"
+#include "bytes.h"
+#include "definitions.h"
+#include "global.h"
 
 namespace Utils {
 

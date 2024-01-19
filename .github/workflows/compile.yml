@@ -1,0 +1,27 @@
+name: compile executable
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y mingw-w64
+        sudo apt-get install -y cmake
+      
+    - name: Build the PC software
+      run: |
+        cd PC
+        cmake -B build
+        cmake --build build
+
+    - uses: actions/upload-artifact@v3
+      with:
+          name: csgo-hacks-${{ github.sha }} 
+          path: PC/build/pc-software.exe

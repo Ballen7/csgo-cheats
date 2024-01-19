@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.19)
-project(PC)
+
+set(CMAKE_SYSTEM_NAME Windows)
+
+set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
+set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
+
+project(pc-software)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_GENERATOR_PLATFORM x86)
@@ -22,6 +28,13 @@ set(SOURCES
         dump.h
         )
 
-add_executable(PC main.cpp ${SOURCES})
-target_include_directories(PC PUBLIC
+add_compile_options(-Wno-error -fpermissive)
+
+add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE setupapi)
+
+target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
+
+target_link_options(${PROJECT_NAME} PRIVATE -static -static-libgcc -static-libstdc++)

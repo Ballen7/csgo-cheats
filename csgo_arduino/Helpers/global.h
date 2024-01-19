@@ -6,7 +6,7 @@
 #include <Arduino.h>
 #include <LiquidCrystal.h>
 
-#include "Helpers/definitions.h"
+#include "definitions.h"
 
 namespace Global {
 
