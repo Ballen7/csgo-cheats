@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.19)
 
 set(CMAKE_SYSTEM_NAME Windows)
 
-set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
-set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
+set(CMAKE_C_COMPILER i686-w64-mingw32-gcc)
+set(CMAKE_CXX_COMPILER i686-w64-mingw32-g++)
 
 project(pc-software)
 
@@ -27,8 +27,6 @@ set(SOURCES
         Vector/vector.h
         dump.h
         )
-
-add_compile_options(-Wno-error -fpermissive)
 
 add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
 
