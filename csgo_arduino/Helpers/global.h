@@ -31,12 +31,12 @@ byte wh_player_index = 0;
 byte bhop_button = BHOP_OFF;
 
 byte trigger_bot_page = TRIGGER_PAGE_STATE;
-byte trigger_bot_state = TRIGGER_OFF;
+byte trigger_bot_state = TRIGGER_ON;
 int16_t trigger_bot_delay = 0;
 uint32_t trigger_bot_delay_start = 0;
 
 byte aim_bot_page = AIM_PAGE_STATE;
-byte aim_bot_state = AIM_OFF;
+byte aim_bot_state = AIM_ON;
 byte aim_bot_bone = AIM_BONE_HEAD;
 float aim_bot_fov = 5.f;
 float aim_bot_smooth = 1.f;
