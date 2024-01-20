@@ -47,11 +47,11 @@ void Load(int address, T* data) {
 
 inline void LoadAllSettings() {
   Global::trigger_bot_state = TRIGGER_ON;
-  Global::trigger_bot_delay = 0;
+  Global::trigger_bot_delay = 2;
 
   Global::aim_bot_state = AIM_ON;
   Global::aim_bot_bone = AIM_BONE_HEAD;
-  Global::aim_bot_fov = 10;
+  Global::aim_bot_fov = 5;
   Global::aim_bot_smooth = 1;
 }
 

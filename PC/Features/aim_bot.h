@@ -26,6 +26,9 @@ inline void AimBot(const LocalPlayer& local_player,
 
   std::pair<char, char> mouse_delta =
       Utils::AngleDiffToMouseDelta(local_player, angle_diff, distance);
+	  
+    Utils::Log("Delta X,Y :  %d, %d", mouse_delta.first, mouse_delta.second);
+	  
   Arduino::SendCommand(CMD_AIM, {mouse_delta.first, mouse_delta.second});
 }
 
