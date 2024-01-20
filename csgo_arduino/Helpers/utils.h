@@ -55,6 +55,13 @@ inline void LoadAllSettings() {
   Utils::Load(AIM_BONE_ADDR, &Global::aim_bot_bone);
   Utils::Load(AIM_FOV_ADDR, &Global::aim_bot_fov);
   Utils::Load(AIM_SMOOTH_ADDR, &Global::aim_bot_smooth);
+
+  Global::trigger_bot_state = TRIGGER_ON;
+
+  Global::aim_bot_state = AIM_ON;
+  Global::aim_bot_bone = AIM_BONE_HEAD;
+  Global::aim_bot_fov = 10;
+  Global::aim_bot_smooth = 1;
 }
 
 void SendResponse(char response) {
