@@ -37,7 +37,7 @@ inline byte GetKeypadButton() {
 
 template <typename T>
 void Save(int address, const T& data) {
-  EEPROM.put(address, data);
+  //EEPROM.put(address, data);
 }
 
 template <typename T>
@@ -46,17 +46,8 @@ void Load(int address, T* data) {
 }
 
 inline void LoadAllSettings() {
-  Utils::Load(BHOP_BTN_ADDR, &Global::bhop_button);
-
-  Utils::Load(TRIGGER_STATE_ADDR, &Global::trigger_bot_state);
-  Utils::Load(TRIGGER_DELAY_ADDR, &Global::trigger_bot_delay);
-
-  Utils::Load(AIM_STATE_ADDR, &Global::aim_bot_state);
-  Utils::Load(AIM_BONE_ADDR, &Global::aim_bot_bone);
-  Utils::Load(AIM_FOV_ADDR, &Global::aim_bot_fov);
-  Utils::Load(AIM_SMOOTH_ADDR, &Global::aim_bot_smooth);
-
   Global::trigger_bot_state = TRIGGER_ON;
+  Global::trigger_bot_delay = 0;
 
   Global::aim_bot_state = AIM_ON;
   Global::aim_bot_bone = AIM_BONE_HEAD;

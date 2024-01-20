@@ -11,9 +11,9 @@
 
 inline void TriggerBot(const LocalPlayer& local_player,
                        const EntityList& entity_list) {
-  if (!Utils::IsHeld(Global::trigger_bot_button)) {
-    return;
-  }
+  //if (!Utils::IsHeld(Global::trigger_bot_button)) {
+   // return;
+  //}
 
   int target_entity_id = local_player.GetCrosshairId();
   if (!EntityList::CanBeEntity(target_entity_id)) {

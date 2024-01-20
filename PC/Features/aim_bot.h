@@ -13,9 +13,9 @@
 
 inline void AimBot(const LocalPlayer& local_player,
                    const EntityList& entity_list) {
-  if (!Utils::IsHeld(Global::aim_bot_button)) {
-    return;
-  }
+  //if (!Utils::IsHeld(Global::aim_bot_button)) {
+  //  return;
+  //}
 
   std::pair<Vector, float> angle_diff_and_distance =
       local_player.GetAimAngleDiffAndDistance(entity_list,
